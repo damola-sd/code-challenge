@@ -5,6 +5,7 @@ const app = express();
 
 app.use(cors());
 app.use('/api', v1());
+app.use(express.json());
 
 const port = 5005;
 app.listen(port, () => console.log(`Server running on port ${port}`));
