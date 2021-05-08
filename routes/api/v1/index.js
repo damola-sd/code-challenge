@@ -17,6 +17,7 @@ module.exports = () => {
   api.post('/current_zone', [validateHR], async (req, res) => {
     try {
       const { resting, current } = req;
+      
       return res.status(200).send(calculateZone(resting, current));
     } catch (err) {
       return res.status(500).send({ error: err.message });
