@@ -1,43 +1,27 @@
-# React Express Starter Pack
+# CP+R Code Challenge
 
-> Create full stack apps with React and Express. Run your client and server with a single command. 
+The following is a short and simple code challenge showing a small cross-section of code you would find on the backend side of our production environement.
 
-### Redux Version
-This version does not include Redux
-[Click Here For Redux Version](https://github.com/bradtraversy/react_redux_express_starter) 
+### Installation
 
-## Quick Start
+You should be familiar with the basic installation process but the short version is `npm install` and then `npm run server` to run begin.
 
-``` bash
-# Install dependencies for server
-npm install
+### Instructions 
 
-# Install dependencies for client
-npm run client-install
+Please fork this repository and create a new branch. Open a PR  and send a link to whichever developer sent you this challenge.
 
-# Run the client & server with concurrently
-npm run dev
+- If you are not familiar with Heart Rate Zone training, please read [this](https://www.polar.com/blog/running-heart-rate-zones-basics/) to familiarize yourself. We are not working with any complicated calculations, but a general understanding will be beneficial. 
 
-# Run the Express server only
-npm run server
+This simple application has two endpoints:
 
-# Run the React client only
-npm run client
+1.)  GET `/api/zones` that will return a JSON object with details regarding the Heart Rate Zones
 
-# Server runs on http://localhost:5000 and client on http://localhost:3000
-```
+2.) POST `/api/current_zone` - takes `current_hr` and `resting_hr` in the body, which must be numbers, and returns the Heart Rate Zone applicable. 
 
-## App Info
+Your job is to fix a problem and implement two features:
 
-### Author
+- Firstly, the code looks and feels quite solid. However, it doesn't seem to be accepting input data. Please ensure data can be sent to the POST endpoint.
+- Once we are receiving user input,  the endpoint will return a string containing the relevant information. The zone, however, is not being calculated yet. Please complete the function in `./helpers/calculateZone.js` to return the correct zone.
+- Excellent. Next is fairly open ended - we would like you to implement some simple testing to the application. It is up to you as to how much or little you implement. More is not necessarily better. If this was a feature you were implementing in the real world, you would need to balance time spent developing vs coverage. You may use any library or libraries you see fit. 
 
-Brad Traversy
-[Traversy Media](http://www.traversymedia.com)
-
-### Version
-
-1.0.0
-
-### License
-
-This project is licensed under the MIT License
+We estimate that 2 hours should be adequate but please feel free to take less or more time as you feel necessary. 
