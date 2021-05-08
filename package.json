@@ -4,8 +4,15 @@
   "description": "Code Challenge for CP+R applicants",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js"
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "test": "jest --coverage"
+  },
+
+  "jest": {
+    "collectCoverageFrom": [
+      "routes/**/**/*.js"
+    ]
   },
   "license": "MIT",
   "devDependencies": {
