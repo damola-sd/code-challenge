@@ -9,5 +9,4 @@ app.use(cors());
 app.use('/api', v1());
 
 
-const port = 5005;
-app.listen(port, () => console.log(`Server running on port ${port}`));
+module.exports = app;
